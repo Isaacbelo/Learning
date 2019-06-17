@@ -1,0 +1,23 @@
+//TABUADA
+//IMPRIME TABUADA DO NÚMERO ESCOLHIDO
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main(){
+    int i,num;
+    cout<<"Digite o número da tabuada desejada: ";
+    cin>>num;
+    cout<<"\n\nA tabuada do número "<<num<<" é: \n\n"<<endl;
+
+    for (i=1; i<=10; i++)
+        
+        cout<<setw(4)<<i<<" x "<<num<<" = "<<setw(4)<<(i*num)<<endl;
+        
+    cout<<endl;
+    system("pause");
+    return 0;
+    
+    
+    }
