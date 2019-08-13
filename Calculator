@@ -1,44 +1,74 @@
-//Calculadora simples usando funções e menu
+///Calculadora simples usando funções e menu
 
 #include <iostream>
 using namespace std;
-
+void menu(){//função de menu tipo void
+  cout<<"Digite o tipo de operacao:\n\n1- Adicao\n2- Subtracao\n3- Multiplicacao\n4- Divisao\n0- Sair"<<endl;
+};
+int soma(){//função para soma
+  int num1, num2;
+  cout<<"\nDigite o primeiro numero: ";
+  cin>>num1;
+  cout<<"Digite o segundo numero: ";
+  cin>>num2;
+  return (num1+num2);
+}
+int subtracao(){//função para subtração
+  int num1, num2;
+  cout<<"\nDigite o primeiro numero: ";
+  cin>>num1;
+  cout<<"Digite o segundo numero: ";
+  cin>>num2;
+  return (num1-num2);
+}
+int multiplicacao(){//função para multiplicação
+  int num1, num2;
+  cout<<"\nDigite o primeiro numero: ";
+  cin>>num1;
+  cout<<"Digite o segundo numero: ";
+  cin>>num2;
+  return (num1*num2);
+}
+  float divisao(){//função para divisao
+  int num1, num2;
+  cout<<"\nDigite o primeiro numero: ";
+  cin>>num1;
+  cout<<"Digite o segundo numero: ";
+  cin>>num2;
+  if(num2 !=0){
+    return (num1/num2);
+  }else{
+    return -1;
+  }
+  
+}
 int main(){
   int num1, num2, opc;
   do{
-    cout<<"Digite o tipo de operacao:\n\n1- Adicao\n2- Subtracao\n3- Multiplicacao\n4- Divisao\n0- Sair"<<endl;
+    menu();
     cin>>opc;
+    
     switch(opc){
       case 0:
       cout<<"Saindo..."<<endl;
       break;
       case 1:
-      cout<<"\nDigite o primeiro numero: ";
-      cin>>num1;
-      cout<<"Digite o segundo numero: ";
-      cin>>num2;
-      cout<<"Adicao: "<<num1<<" + "<<num2<<" = "<<num1+num2<<endl;
+        cout<<"Soma: "<<soma()<<endl;      
       break;
       case 2:
-      cout<<"\nDigite o primeiro numero: ";
-      cin>>num1;
-      cout<<"Digite o segundo numero: ";
-      cin>>num2;
-      cout<<"Subtracao: "<<num1<<" - "<<num2<<" = "<<num1-num2<<endl;
+        cout<<"Subtracao: "<<subtracao()<<endl;
       break;
       case 3:
-      cout<<"\nDigite o primeiro numero: ";
-      cin>>num1;
-      cout<<"Digite o segundo numero: ";
-      cin>>num2;
-      cout<<"Multiplicacao: "<<num1<<" * "<<num2<<" = "<<num1*num2<<endl;
+        cout<<"Multiplicacao: "<<multiplicacao()<<endl;
       break;
       case 4:
-      cout<<"\nDigite o primeiro numero: ";
-      cin>>num1;
-      cout<<"Digite o segundo numero: ";
-      cin>>num2;
-      cout<<"Divisao: "<<num1<<" / "<<num2<<" = "<<num1/num2<<endl;
+        int result;
+        result = divisao();
+        if(result !=-1){
+          cout<<"Divisao: "<<result<<endl;
+        }else{
+          cout<<"Impossivel dividir por 0!!!";
+        }            
       break;
       default: cout<<"Operacao invalida!!"<<endl;
 
