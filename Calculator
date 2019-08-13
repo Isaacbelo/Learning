@@ -1,0 +1,51 @@
+//Calculadora simples usando funções e menu
+
+#include <iostream>
+using namespace std;
+
+int main(){
+  int num1, num2, opc;
+  do{
+    cout<<"Digite o tipo de operacao:\n\n1- Adicao\n2- Subtracao\n3- Multiplicacao\n4- Divisao\n0- Sair"<<endl;
+    cin>>opc;
+    switch(opc){
+      case 0:
+      cout<<"Saindo..."<<endl;
+      break;
+      case 1:
+      cout<<"\nDigite o primeiro numero: ";
+      cin>>num1;
+      cout<<"Digite o segundo numero: ";
+      cin>>num2;
+      cout<<"Adicao: "<<num1<<" + "<<num2<<" = "<<num1+num2<<endl;
+      break;
+      case 2:
+      cout<<"\nDigite o primeiro numero: ";
+      cin>>num1;
+      cout<<"Digite o segundo numero: ";
+      cin>>num2;
+      cout<<"Subtracao: "<<num1<<" - "<<num2<<" = "<<num1-num2<<endl;
+      break;
+      case 3:
+      cout<<"\nDigite o primeiro numero: ";
+      cin>>num1;
+      cout<<"Digite o segundo numero: ";
+      cin>>num2;
+      cout<<"Multiplicacao: "<<num1<<" * "<<num2<<" = "<<num1*num2<<endl;
+      break;
+      case 4:
+      cout<<"\nDigite o primeiro numero: ";
+      cin>>num1;
+      cout<<"Digite o segundo numero: ";
+      cin>>num2;
+      cout<<"Divisao: "<<num1<<" / "<<num2<<" = "<<num1/num2<<endl;
+      break;
+      default: cout<<"Operacao invalida!!"<<endl;
+
+
+
+     }
+  }while(opc != 0);
+  return 0;
+}
+
