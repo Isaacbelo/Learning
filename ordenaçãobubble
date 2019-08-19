@@ -1,0 +1,33 @@
+/*
+Author: Is@@c
+Date: 19/08/19
+About: Bubble sort - Pega o primeiro e compara com o proximo;*/
+#include <iostream>
+using namespace std;
+void ordena(int vetor[], int numeros){
+  for(int i=0; i<numeros; i++){
+    for(int j=0; j<numeros-1; j++){
+      if(vetor[i]<vetor[j]){
+        int aux=vetor[i];
+        vetor[i]=vetor[j];
+        vetor[j]=aux;
+      }
+    }
+  }
+}
+
+int main(){
+  int numeros=10;
+  int vetor[numeros];
+
+  for(int i=0; i<numeros; i++){
+    cout<<"Digite um numero: ";
+    cin>>vetor[i];
+  }
+  ordena(vetor, numeros);
+  for(int j=0; j<numeros; j++){
+    cout<<vetor[j]<<endl;
+  }
+
+  return 0;
+}
