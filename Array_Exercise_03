@@ -1,0 +1,43 @@
+/*
+faça um algoritmo que preencha uma matriz de inteiros 3×3 com valores aleatórios entre -50 e 50 e, através de uma função, retorne quantas vezes aparece o número zero.
+*/
+#include <iostream>
+#include <time.h>
+#include <stdlib.h>
+#include <iomanip>
+using namespace std;
+
+int contaZero(int mat[3][3]) {
+  int contador = 0;
+  
+  for (int i = 0; i < 3; i++) {
+    for (int j = 0; j < 3; j++) {
+      if (mat[i][j] == 0) {
+        contador++;
+      }
+    }
+  } 
+  return contador;
+}
+
+int main() {
+
+  int matriz[3][3];
+  int intervalo = 101-50;
+  srand (time(NULL));
+  cout << "\nNumeros gerados" << endl;
+  cout << setfill(' ');
+  cout << "\n";
+
+  for (int i = 0; i < 3; i++) {
+    for (int j = 0; j < 3; j++) {
+      matriz[i][j] = rand()% intervalo;
+      cout << setw(2) << matriz[i][j] << "  ";
+    }cout << endl;
+    
+  }
+  cout << "\nVezes em que o numero 0 aparece: " << contaZero(matriz) << endl;;
+
+
+  return 0;
+}
